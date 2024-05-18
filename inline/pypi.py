@@ -26,6 +26,8 @@ from telethon.tl.types import DocumentAttributeAudio as Audio
 from telethon.tl.types import InputWebDocument as wb
 from telethon.tl.types import MessageEntityTextUrl
 
+from . import InlinePlugin
+
 hash_to_url = {}
 
 
@@ -278,3 +280,5 @@ async def back_button_clicked(event):
     text = PYPI_LIST[qid]["text"]
     buttons = PYPI_LIST[qid]["buttons"]
     await event.edit(text, buttons=buttons)
+    
+InlinePlugin.update({"ᴘʏᴘɪ sᴇᴀʀᴄʜ": "pypi"})
